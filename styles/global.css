@@ -244,7 +244,7 @@ h2 {
 }
 
 .container-nosotros {
-  max-width: 1200px;
+  max-width: 90vw;
   margin: 0 auto;
 }
 
@@ -843,20 +843,16 @@ h2 {
     margin-top: 1.9rem;
     font-size: 2.2rem;
   }
-
-  #nosotros-escritorio {
-    display: none;
-  }
-
-  #nosotros-movil {
-    display: block!important;
-    max-width: 85vw;
-    margin-left: auto;
-    margin-right: auto;
-  }
   
   .slide-track {
-    animation: scroll 6s linear infinite;
+    animation: scroll 10s linear infinite;
+    min-width: 600%;
   }
 
+  .nosotros-escritorio {
+    display: none;
+  }
+  .nosotros-movil {
+    display: block !important;
+  }
 }
