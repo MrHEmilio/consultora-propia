@@ -90,6 +90,7 @@ a:hover::after {
 
 .logo-nav {
   max-height: 95px;
+  min-height: 65px !important;
   border-radius: 50px;
   background-color: rgba(241, 244, 248, 0.3);
   backdrop-filter: blur(9px);
@@ -189,7 +190,7 @@ h2 {
 .slide-track {
   overflow: hidden;
   display: flex;
-  animation: scroll 40s linear infinite;
+  animation: scroll 11s linear infinite;
   min-width: 200%;
 }
 
@@ -230,6 +231,8 @@ h2 {
     transform: translateX(-50%);
   }
 }
+
+
 
 /* Nosotros */
 
@@ -836,7 +839,24 @@ h2 {
     flex-direction: column;
   }
   .titulo-seccion {
+    margin-bottom: 0.5rem;
+    margin-top: 1.9rem;
     font-size: 2.2rem;
+  }
+
+  #nosotros-escritorio {
+    display: none;
+  }
+
+  #nosotros-movil {
+    display: block!important;
+    max-width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .slide-track {
+    animation: scroll 6s linear infinite;
   }
 
 }
