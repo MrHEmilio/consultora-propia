@@ -835,5 +835,8 @@ h2 {
     max-width: 80vw;
     flex-direction: column;
   }
+  .titulo-seccion {
+    font-size: 1.5rem;
+  }
 
 }
