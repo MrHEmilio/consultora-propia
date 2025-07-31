@@ -727,7 +727,7 @@ h2 {
   font-size: 1.1rem;
   text-align: center;
   margin-bottom: 3rem;
-  color: var(--color-2);
+  color: var(--color-4);
 }
 
 .formulario-cotizacion {
@@ -755,7 +755,7 @@ h2 {
 .campo-formulario label {
   margin-bottom: 0.5rem;
   font-weight: 600;
-  color: var(--color-1);
+  color: var(--color-4);
 }
 
 .campo-formulario input,
@@ -774,7 +774,7 @@ h2 {
 .campo-formulario select:focus,
 .campo-formulario textarea:focus {
   outline: none;
-  border-color: var(--color-1);
+  border-color: var(--color-5);
 }
 
 .boton-enviar {
