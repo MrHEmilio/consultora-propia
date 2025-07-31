@@ -30,7 +30,7 @@ function mostrarSocios() {
     </div>
   </div>
   <div class="tarjeta__visual">
-    <div class="tarjeta__imagen-fondo" style="background-image: url('/assets/colabs/intercambio-colab.webp');">
+    <div class="tarjeta__imagen-fondo" style="background-image: url('assets/colabs/intercambio-colab.webp');">
       <!-- Aquí tú defines la imagen con CSS -->
     </div>
     <button class="tarjeta__btn" id="btn-formulario-uno">Soy emprendedor</button>
@@ -63,7 +63,7 @@ Hagamos equipo y dejemos huella juntos.
     </div>
   </div>
   <div class="tarjeta__visual">
-    <div class="tarjeta__imagen-fondo" style="background-image: url('/assets/colabs/perrito-colab.webp');">
+    <div class="tarjeta__imagen-fondo" style="background-image: url('assets/colabs/perrito-colab.webp');">
       <!-- En el div de aquí arriba va la imagen de fondo -->
     </div>
     <button class="tarjeta__btn" id="btn-formulario-uno">Ayudemos</button>
@@ -94,7 +94,7 @@ function mostrarDonaciones (){
     </div>
   </div>
   <div class="tarjeta__visual">
-    <div class="tarjeta__imagen-fondo" style="background-image: url('/assets/colabs/donaciones-colab.webp');">
+    <div class="tarjeta__imagen-fondo" style="background-image: url('assets/colabs/donaciones-colab.webp');">
       <!-- En el div de aquí arriba va la imagen de fondo -->
     </div>
     <button class="tarjeta__btn" id="transferencia-btn">Invítame un café</button>
@@ -126,7 +126,7 @@ function mostrarVoluntariado(){
     </div>
   </div>
   <div class="tarjeta__visual">
-    <div class="tarjeta__imagen-fondo" style="background-image: url('/assets/colabs/voluntariado-colab.webp');">
+    <div class="tarjeta__imagen-fondo" style="background-image: url('assets/colabs/voluntariado-colab.webp');">
       <!-- En el div de aquí arriba va la imagen de fondo -->
     </div>
     <button class="tarjeta__btn" id="btn-formulario-dos">Quiero experiencia</button>
@@ -159,7 +159,7 @@ function mostrarPatrocinios(){
     </div>
   </div>
   <div class="tarjeta__visual">
-    <div class="tarjeta__imagen-fondo" style="background-image: url('/assets/colabs/patrocinadores-colab.webp');">
+    <div class="tarjeta__imagen-fondo" style="background-image: url('assets/colabs/patrocinadores-colab.webp');">
       <!-- En el div de aquí arriba va la imagen de fondo -->
     </div>
     <button class="tarjeta__btn" id="btn-formulario-uno">Anúnciate</button>
@@ -191,7 +191,7 @@ function mostrarReferidos(){
     </div>
   </div>
   <div class="tarjeta__visual">
-    <div class="tarjeta__imagen-fondo" style="background-image: url('/assets/colabs/referidos-colab.webp');">
+    <div class="tarjeta__imagen-fondo" style="background-image: url('assets/colabs/referidos-colab.webp');">
       <!-- En el div de aquí arriba va la imagen de fondo -->
     </div>
     <button class="tarjeta__btn" id="btn-formulario-uno">Soy referido</button>
