@@ -366,7 +366,7 @@ h2 {
 .servicios {
   font-family: "Intel One Mono", monospace;
   padding: 80px 20px;
-  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='70' height='8' patternTransform='scale(3) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b2bff'/><path d='M-.02 22c8.373 0 11.938-4.695 16.32-9.662C20.785 7.258 25.728 2 35 2c9.272 0 14.215 5.258 18.7 10.338C58.082 17.305 61.647 22 70.02 22M-.02 14.002C8.353 14 11.918 9.306 16.3 4.339 20.785-.742 25.728-6 35-6 44.272-6 49.215-.742 53.7 4.339c4.382 4.967 7.947 9.661 16.32 9.664M70 6.004c-8.373-.001-11.918-4.698-16.3-9.665C49.215-8.742 44.272-14 35-14c-9.272 0-14.215 5.258-18.7 10.339C11.918 1.306 8.353 6-.02 6.002' stroke-width='4' stroke='%23e57c61ff' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
+  background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(3) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='%232b2b2bff'/><path d='M45.69 13.342c-1.677.945-3.557 1.6-5.48 1.588-1.922-.012-3.795-.691-5.462-1.653-1.668-.962-3.156-2.202-4.637-3.435-1.48-1.232-2.97-2.47-4.641-3.427-1.67-.957-3.547-1.628-5.47-1.628-1.923 0-3.8.67-5.47 1.628-1.67.956-3.161 2.195-4.641 3.427-1.48 1.233-2.97 2.473-4.637 3.435-1.667.962-3.54 1.641-5.463 1.653-1.922.012-3.802-.643-5.478-1.588v13.316c1.676-.945 3.556-1.6 5.478-1.588 1.923.012 3.796.691 5.463 1.653 1.668.962 3.156 2.202 4.637 3.435 1.48 1.232 2.97 2.47 4.641 3.427 1.67.957 3.547 1.628 5.47 1.628 1.923 0 3.8-.67 5.47-1.628 1.67-.956 3.161-2.195 4.641-3.427 1.48-1.233 2.97-2.473 4.637-3.435 1.667-.962 3.54-1.641 5.463-1.653 1.922-.012 3.802.643 5.478 1.588z' stroke-width='5.5' stroke='%23b9462dff' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
 }
 
 .contenedor-servicios {
@@ -469,9 +469,6 @@ h2 {
 }
 
 /* Para pantallas menores o iguales a 600px (móviles) */
-@media (max-width: 600px) {
-  
-}
 
 
 .tarjeta__contenido {
@@ -562,8 +559,258 @@ h2 {
 
 .colab-btn.activo {
   background-color: var(--color-5);
-  color: var(--color-3);
+  color: var(--color-4);
   transition: background-color 0.3s ease;
+}
+
+
+/*COMPROMISO*/
+
+.tarjeta-compromiso {
+  font-family: "Intel One Mono", monospace;
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 2px solid var(--color-5);
+  background-color: var(--color-3);
+  max-width: 45vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+  text-align: center;
+  padding: 1.1rem;
+}
+
+
+/*EQUIPO*/
+.equipo {
+  padding: 4rem 2rem;
+  background-color: var(--color-4)
+}
+
+.carrusel-equipo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center; /* ✅ Esto centra horizontalmente las tarjetas */
+}
+
+
+.tarjeta-equipo {
+  font-family: "Intel One Monospace", monospace;
+  background: white;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.tarjeta-equipo.activo {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+
+.tarjeta-equipo h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.tarjeta-equipo p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/*este soy yo*/
+.equipo-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 350px;
+  padding: 2rem;
+}
+
+.equipo-foto img {
+  width: 120px;
+  height: 120px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.equipo-nombre {
+  font-family: "Bitcount Prop Single", system-ui;
+  font-size: 1.6rem;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+
+.equipo-cargo {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.equipo-frase {
+  font-style: italic;
+  margin-bottom: 1.2rem;
+}
+
+.equipo-redes a {
+  color: #0073e6;
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
+
+.tarjeta-equipo {
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+.tarjeta-equipo.activo {
+  transform: scale(1.06);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+  z-index: 2;
+}
+
+
+.tarjeta-imagen {
+  width: 100%;
+  margin-top: 1rem;
+  height: 280px;
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+.magic {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, opacity 0.3s ease;
+}
+
+.tarjeta-equipo.activo .magic {
+  max-height: 1000px; /* más grande que lo que puede contener */
+  opacity: 1;
+}
+
+
+.tarjeta-imagen img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ===== Contacto ===== */
+.seccion-contacto {
+  padding: 4rem 2rem;
+  background-color: var(--color-3);
+  color: var(--color-1);
+}
+
+.seccion-contacto .contenedor {
+  font-family: "Intel One Monospace", monospace;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.descripcion-seccion {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--color-2);
+}
+
+.formulario-cotizacion {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .formulario-cotizacion {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .formulario-cotizacion .campo-formulario:nth-child(7),
+  .formulario-cotizacion .campo-formulario:nth-child(8) {
+    grid-column: span 2;
+  }
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo-formulario label {
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--color-1);
+}
+
+.campo-formulario input,
+.campo-formulario select,
+.campo-formulario textarea {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-3);
+  border-radius: 8px;
+  background-color: var(--color-4);
+  font-size: 1rem;
+  color: var(--color-3);
+  transition: border-color 0.3s ease;
+}
+
+.campo-formulario input:focus,
+.campo-formulario select:focus,
+.campo-formulario textarea:focus {
+  outline: none;
+  border-color: var(--color-1);
+}
+
+.boton-enviar {
+  background-color: var(--color-1);
+  color: var(--color-3);
+  margin: 0.5rem;
+  padding: 0.85rem 1.5rem;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.boton-enviar:hover {
+  background-color: var(--color-4);
+}
+
+
+
+.input-error {
+  border: 2px solid red;
+  background-color: #fff0f0;
+}
+
+.mensaje-error {
+  font-size: 0.9rem;
+  color: red;
+  margin-top: 0.3rem;
+  display: none;
+}
+.mensaje-error.activo {
+  display: block;
+}
+
+
+.my-swal-font {
+  font-family: 'Intel One Monospace', monospace !important;
 }
 
 
@@ -582,6 +829,11 @@ h2 {
   .colaboraciones__tarjeta {
     max-width: 90vw; /* o 95vw, para que ocupe casi todo el ancho */
     flex-direction: column; /* Opcional: cambia layout si quieres que apile vertical */
+  }
+
+  .tarjeta-compromiso {
+    max-width: 80vw;
+    flex-direction: column;
   }
 
 }

@@ -5,7 +5,9 @@ const voluntariadoBtn = document.querySelector('#voluntariado-btn');
 const patrociniosBtn = document.querySelector('#patrocinios-btn');
 const referidosBtn = document.querySelector('#referidos-btn');
 const divColaboraciones = document.querySelector('#div-colaboraciones');
-
+const FormularioUnoBtn = document.querySelector('#btn-formulario-uno');
+const FormularioDosBtn = document.querySelector('#btn-formulario-dos');
+const TransferenciaBtn = document.querySelector('#transferencia-btn');
 
 
 function mostrarSocios() {
@@ -31,7 +33,7 @@ function mostrarSocios() {
     <div class="tarjeta__imagen-fondo" style="background-image: url('/assets/colabs/intercambio-colab.webp');">
       <!-- Aquí tú defines la imagen con CSS -->
     </div>
-    <button class="tarjeta__btn">Soy emprendedor</button>
+    <button class="tarjeta__btn" id="btn-formulario-uno">Soy emprendedor</button>
   </div>
   </div>
     `;
@@ -64,7 +66,7 @@ Hagamos equipo y dejemos huella juntos.
     <div class="tarjeta__imagen-fondo" style="background-image: url('/assets/colabs/perrito-colab.webp');">
       <!-- En el div de aquí arriba va la imagen de fondo -->
     </div>
-    <button class="tarjeta__btn">Ayudemos</button>
+    <button class="tarjeta__btn" id="btn-formulario-uno">Ayudemos</button>
   </div>
 </div>
 `;
@@ -95,7 +97,7 @@ function mostrarDonaciones (){
     <div class="tarjeta__imagen-fondo" style="background-image: url('/assets/colabs/donaciones-colab.webp');">
       <!-- En el div de aquí arriba va la imagen de fondo -->
     </div>
-    <button class="tarjeta__btn">Invítame un café</button>
+    <button class="tarjeta__btn" id="transferencia-btn">Invítame un café</button>
   </div>
 </div>
     
@@ -127,7 +129,7 @@ function mostrarVoluntariado(){
     <div class="tarjeta__imagen-fondo" style="background-image: url('/assets/colabs/voluntariado-colab.webp');">
       <!-- En el div de aquí arriba va la imagen de fondo -->
     </div>
-    <button class="tarjeta__btn">Quiero experiencia</button>
+    <button class="tarjeta__btn" id="btn-formulario-dos">Quiero experiencia</button>
   </div>
 </div>
 
@@ -160,7 +162,7 @@ function mostrarPatrocinios(){
     <div class="tarjeta__imagen-fondo" style="background-image: url('/assets/colabs/patrocinadores-colab.webp');">
       <!-- En el div de aquí arriba va la imagen de fondo -->
     </div>
-    <button class="tarjeta__btn">Anúnciate</button>
+    <button class="tarjeta__btn" id="btn-formulario-uno">Anúnciate</button>
   </div>
 </div>
     `;
@@ -192,7 +194,7 @@ function mostrarReferidos(){
     <div class="tarjeta__imagen-fondo" style="background-image: url('/assets/colabs/referidos-colab.webp');">
       <!-- En el div de aquí arriba va la imagen de fondo -->
     </div>
-    <button class="tarjeta__btn">Soy referido</button>
+    <button class="tarjeta__btn" id="btn-formulario-uno">Soy referido</button>
   </div>
 </div>
     `;
@@ -208,5 +210,123 @@ botonesColaboracion.forEach((boton) => {
 
     // Agregar clase 'activo' al botón clicado
     boton.classList.add('activo');
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const tarjetas = document.querySelectorAll('.tarjeta-equipo');
+
+  tarjetas.forEach((tarjeta) => {
+    tarjeta.addEventListener('click', () => {
+      tarjetas.forEach((t) => t.classList.remove('activo')); // Quita "activo" de todas
+      tarjeta.classList.add('activo'); // Añade "activo" a la tarjeta clicada
+    });
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const formulario = document.querySelector(".formulario-cotizacion");
+  const boton = formulario.querySelector(".boton-enviar");
+
+  const campos = {
+    nombre: { input: document.getElementById("nombre"), min: 3, mensaje: "Debe tener al menos 3 caracteres." },
+    contacto: { input: document.getElementById("medio-contacto"), min: 10, mensaje: "Debe tener al menos 10 caracteres." },
+    plazo: { input: document.getElementById("plazo"), min: 4, mensaje: "Debe tener al menos 4 caracteres." },
+    descripcion: { input: document.getElementById("descripcion"), min: 25, mensaje: "Describe con más detalle (mínimo 25 caracteres)." }
+  };
+
+  Object.values(campos).forEach(({ input, min, mensaje }) => {
+    let mensajeError = input.parentElement.querySelector(".mensaje-error");
+    if (!mensajeError) {
+      mensajeError = document.createElement("div");
+      mensajeError.classList.add("mensaje-error");
+      mensajeError.textContent = mensaje;
+      input.parentElement.appendChild(mensajeError);
+    }
+
+    input.addEventListener("input", () => {
+      if (input.value.trim().length < min) {
+        input.classList.add("input-error");
+        mensajeError.classList.add("activo");
+      } else {
+        input.classList.remove("input-error");
+        mensajeError.classList.remove("activo");
+      }
+    });
+  });
+
+  formulario.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    let valido = true;
+
+    Object.values(campos).forEach(({ input, min }) => {
+      const mensajeError = input.parentElement.querySelector(".mensaje-error");
+      if (input.value.trim().length < min) {
+        input.classList.add("input-error");
+        mensajeError.classList.add("activo");
+        valido = false;
+      } else {
+        input.classList.remove("input-error");
+        mensajeError.classList.remove("activo");
+      }
+    });
+
+    if (!valido) return;
+
+    // Desactivar botón para evitar múltiples envíos
+    boton.disabled = true;
+    boton.textContent = "Enviando...";
+
+    emailjs.sendForm("service_7avwgct", "template_w4u47ix", formulario)
+      .then(() => {
+        formulario.reset();
+        Swal.fire({
+          title: "¡Cotización enviada!",
+          text: "Le contactaremos por el medio de contacto que haya puesto.",
+          icon: "success",
+          customClass: {
+            popup: 'my-swal-font'
+          },
+          confirmButtonText: "Entendido",
+          confirmButtonColor: "#b9462d"
+        });
+      })
+      .catch((error) => {
+        console.error("Error al enviar el correo:", error);
+        Swal.fire({
+          title: "Error",
+          text: "No se pudo enviar la cotización. Intenta más tarde.",
+          icon: "error",
+          confirmButtonText: "Ok"
+        });
+      })
+      .finally(() => {
+        boton.disabled = false;
+        boton.textContent = "Solicitar cotización";
+      });
   });
 });
