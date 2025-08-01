@@ -123,13 +123,10 @@ a:hover::after {
   grid-column: 11 / 13; /* usa dos columnas finales */
   justify-self: end;
   z-index: 1001; /* encima del menú */
+  color: var(--color-1);
 }
 
 
-.icono-hamburguesa {
-  width: 30px;
-  height: 30px;
-}
 
 /* Ocultar menú en móviles */
 @media (max-width: 880px) {
