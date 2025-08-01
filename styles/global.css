@@ -89,8 +89,8 @@ a:hover::after {
 }
 
 .logo-nav {
-  max-height: 70px;
-  min-height: 55px !important;
+  max-height: 55px;
+  min-height: 45px !important;
   border-radius: 50px;
   background-color: rgba(241, 244, 248, 0.3);
   backdrop-filter: blur(9px);
