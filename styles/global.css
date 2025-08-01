@@ -952,3 +952,23 @@ h2 {
     display: block !important;
   }
 }
+
+
+.colaboraciones-wrapper {
+  position: relative;
+}
+
+.overlay-pendiente {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo negro con transparencia */
+  color: white;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 900; /* Encima de todo */
+  text-align: center;
+  backdrop-filter: blur(4px); /* Opcional: efecto blur */
+  pointer-events: none; /* Para evitar clics en la capa */
+}
