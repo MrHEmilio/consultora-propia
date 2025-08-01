@@ -330,3 +330,18 @@ document.addEventListener("DOMContentLoaded", () => {
       });
   });
 });
+
+
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+const links = document.querySelectorAll(".nav-links a");
+
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('active');
+});
+
+links.forEach(link => {
+  link.addEventListener("click", () => {
+    navLinks.classList.remove('active');
+  });
+});
