@@ -201,6 +201,22 @@ function mostrarReferidos(){
 }//mostrarReferidos
 referidosBtn.addEventListener("click", mostrarReferidos);
 
+document.addEventListener('DOMContentLoaded', () => {
+  const toggleBtn = document.getElementById('toggle-colab-btn');
+  const contenedorBotones = document.querySelector('.colaboraciones__botones');
+
+  toggleBtn.addEventListener('click', () => {
+    contenedorBotones.classList.toggle('activo');
+  });
+
+  contenedorBotones.addEventListener('click', (e) => {
+    if (e.target.tagName === 'BUTTON') {
+      contenedorBotones.classList.remove('activo');
+    }
+  });
+});
+
+
 const botonesColaboracion = document.querySelectorAll('.colab-btn');
 
 botonesColaboracion.forEach((boton) => {

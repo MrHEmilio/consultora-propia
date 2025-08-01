@@ -237,9 +237,21 @@
   </div>
 </section>
 
+
+
+
+
 <!-- Colaboraciones -->
 <section class="colaboraciones" id="colaboraciones">
   <h2 class="titulo-seccion"><span class="color-1">Colaboraciones</span></h2>
+  <!-- Botón toggle solo visible en móvil -->
+  <div class="colaboraciones__toggle-movil">
+  <button id="toggle-colab-btn" class="colaboraciones__toggle">
+    Programas
+    <!-- Aquí insertas tu SVG flechita -->
+    <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-down-icon lucide-chevron-down"><path d="m6 9 6 6 6-6"/></svg>
+  </button>
+</div>
   <div class="colaboraciones__botones">
     <button class="colab-btn activo" id="socios-btn" data-programa="estrategicos">Socios estratégicos</button>
     <button class="colab-btn" id="causas-btn" data-programa="causas">Causas benéficas</button>
@@ -434,17 +446,17 @@
       <div class="campo-formulario">
         <button type="submit" class="boton-enviar">Solicitar cotización</button>
       </div>
-      <a style="color: var(--color-4); border: 1px solid var(--color-4); padding: 1rem; border-radius: 10px;" href="colaboraciones">Quiero una colaboración</a>
+      <a style="color: var(--color-4); border: 1px solid var(--color-4); padding: 1rem; border-radius: 10px;" href="#colaboraciones">Quiero una colaboración</a>
     </form>
   </div>
 </section>
 
-<!-- Aquí empieza el footer -->
+<!-- Aquí empieza el FOOTER -->
     <footer class="footer">
   <div class="footer-top">
     <!-- Sección 1: Logo y mensaje -->
     <div class="footer-section">
-      <img src="assets//logo/logo-name.svg" alt="Logo de Orbium" class="footer-logo" styles="max-width: 70px;">
+      <img src="assets//logo/logo-name.svg" alt="Logo de Orbium" class="footer-logo">
       <p class="footer-message">
         Transformamos sueños en realidades. En Orbium creemos que la tecnología, la pasión y la creatividad pueden cambiar el mundo. Agradecemos mucho tu visita.
       </p>
